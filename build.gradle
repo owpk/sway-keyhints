@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+    id 'org.mikeneck.graalvm-native-image' version 'v1.4.0'
+}
+
+version = "0.1"
+group = "com.owpk"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+application {
+    mainClass.set("com.owpk.SwayKeyHints")
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("17")
+    targetCompatibility = JavaVersion.toVersion("17")
+}
+
+nativeImage {
+    // My JAVA_HOME was set automatically by sdkman and not visible from gradle,
+    // use 'System.getenv('JAVA_HOME') instead
+    // or point to native-image executable directly like below
+    graalVmHome = '/home/owpk/.sdkman/candidates/java/current'
+    mainClass = "com.owpk.SwayKeyHints"
+    executableName = "swaykeyhints"
+    outputDirectory = file("$buildDir/executable")
+    arguments(
+            "--no-fallback",
+            "--enable-all-security-services",
+            "--initialize-at-run-time=com.example.runtime",
+            "--report-unsupported-elements-at-runtime"
+    )
+}
