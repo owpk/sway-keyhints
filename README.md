@@ -37,7 +37,7 @@ $ nwg-wrapper -s keyhints.sh -r 1800000 -c style.css -p left -ml 200
 </p>
 
 ## Manual build
-### <a name="gvm"></a><h1>GraalVM native-image</h1>
+### GraalVM native-image
 
 > prerequisites:
 - java graalvm 17 [install guide](https://www.graalvm.org/docs/getting-started/)  
