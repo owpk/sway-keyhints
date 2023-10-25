@@ -1,13 +1,5 @@
 ### animated lolcat combined with figlet
 
-<p align="center">
-   <img src="https://github.com/owpk/sway-keyhints/blob/main/github/nwg.jpg"/>
-</p>
-
-<p align="center">
-   <img src="https://github.com/owpk/sway-keyhints/blob/main/github/console.jpg"/>
-</p>
-
 ## Usage
 - Download latest 
 
@@ -21,9 +13,31 @@ $ ./swaykeyhints -h 10 -w 20
 # use -w key to set column width
 ```
 
----
+<p align="center">
+   <img src="https://github.com/owpk/sway-keyhints/blob/main/github/console.jpg"/>
+</p>
+
+ - Also you can use script with [nwg-wrapper](https://github.com/nwg-piotr/nwg-wrapper)
+
+1. Create script with random name (for example keyhints.sh) in your 'nwg-wrapper config' directory (for me it '~/.config/nwg-wrapper/')  
+
+* keyhints.sh
+```bash
+#!/bin/sh
+ ~/.config/sway/scripts/swaykeyhints $HOME/.config/sway/config -h 48 -w 70
+```
+
+2. run nwg-wrapper binary 
+```bash
+$ nwg-wrapper -s help.sh -r 1800000 -c style.css -p left -ml 200
+```
+
+<p align="center">
+   <img src="https://github.com/owpk/sway-keyhints/blob/main/github/nwg.jpg"/>
+</p>
+
 ## Build
-# <a name="gvm"></a><h1>GraalVM native-image</h1>
+### <a name="gvm"></a><h1>GraalVM native-image</h1>
 
 > prerequisites:
 - java graalvm 17 [install guide](https://www.graalvm.org/docs/getting-started/)  
