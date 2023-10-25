@@ -1,11 +1,11 @@
 ### animated lolcat combined with figlet
 
 <p align="center">
-   <img src="https://github.com/owpk/sway-keyhints/blob/master/github/nwg.jpg"/>
+   <img src="https://github.com/owpk/sway-keyhints/blob/main/github/nwg.jpg"/>
 </p>
 
 <p align="center">
-   <img src="https://github.com/owpk/sway-keyhints/blob/master/github/console.jpg"/>
+   <img src="https://github.com/owpk/sway-keyhints/blob/main/github/console.jpg"/>
 </p>
 
 ## Usage
