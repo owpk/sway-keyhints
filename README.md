@@ -1,7 +1,7 @@
 ### animated lolcat combined with figlet
 
 ## Usage
-- Download latest 
+- Download [latest release](https://github.com/owpk/sway-keyhints/releases/tag/1.0)
 
 ```bash
 # by default, the script parses the './config/sway/config' and '/etc/sway/config' paths
@@ -36,7 +36,7 @@ $ nwg-wrapper -s help.sh -r 1800000 -c style.css -p left -ml 200
    <img src="https://github.com/owpk/sway-keyhints/blob/main/github/nwg.jpg"/>
 </p>
 
-## Build
+## Manual build
 ### <a name="gvm"></a><h1>GraalVM native-image</h1>
 
 > prerequisites:
