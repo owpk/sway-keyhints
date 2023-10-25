@@ -29,7 +29,7 @@ $ ./swaykeyhints -h 10 -w 20
 
 2. run nwg-wrapper binary 
 ```bash
-$ nwg-wrapper -s help.sh -r 1800000 -c style.css -p left -ml 200
+$ nwg-wrapper -s keyhints.sh -r 1800000 -c style.css -p left -ml 200
 ```
 
 <p align="center">
