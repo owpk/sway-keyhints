@@ -52,5 +52,5 @@ $ nwg-wrapper -s keyhints.sh -r 1800000 -c style.css -p left -ml 200
    $ ./gradlew nativeImage
 
    $ cd build/executable
-   $ ./swaykeyhints"Hello world!" -a
+   $ ./swaykeyhints
    ```
