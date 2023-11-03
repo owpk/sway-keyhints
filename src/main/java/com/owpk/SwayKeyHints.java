@@ -4,8 +4,6 @@ import com.owpk.sway.ConfigParserImpl;
 import com.owpk.sway.SwayConfigFileParser;
 
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -87,14 +85,6 @@ public class SwayKeyHints {
             sb.append("\n");
         }
         return sb;
-    }
-
-    private static Path tryToGetPath(String path) {
-        try {
-            return Paths.get(path);
-        } catch (Exception e) {
-            return null;
-        }
     }
 
     private static <T> List<List<T>> createParts(List<T> keyBindings) {

@@ -12,6 +12,11 @@ public class SwayConfigFileParser {
     public List<String> parsePaths(Path path) throws IOException {
         Files.walkFileTree(replaceEnvVariable(path), new SimpleFileVisitor<>() {
             @Override
+            public FileVisitResult visitFileFailed(Path file, IOException exc) {
+                return FileVisitResult.CONTINUE;
+            }
+
+            @Override
             public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
                 var nextDir = replaceEnvVariable(dir);
                 return super.preVisitDirectory(nextDir, attrs);
@@ -27,7 +32,11 @@ public class SwayConfigFileParser {
                         if (nextPath.length > 1) {
                             var nextPathString = nextPath[1].replaceAll("[*]", "").strip();
                             var pathVar = replaceEnvVariable(Paths.get(nextPathString));
-                            parsePaths(pathVar);
+                            try {
+                                parsePaths(pathVar);
+                            } catch (Exception e) {
+                                // ignore
+                            }
                         }
                     } else
                         res.add(line);
